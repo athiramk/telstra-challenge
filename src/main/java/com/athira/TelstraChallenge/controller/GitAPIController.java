@@ -21,7 +21,7 @@ public class GitAPIController {
 
     @GetMapping("/search")
     public GithubSearchResponse searchOldestZeroFollowers(@RequestParam(name = "count", defaultValue = "3") int count) {
-        log.info("Received request to search for oldest users with zero followers, count: ", count);
+        log.info("Received request to search for oldest users with zero followers, count: "+ count);
         return gitAPIService.getOldestZeroFollowers(count);
     }
 }
